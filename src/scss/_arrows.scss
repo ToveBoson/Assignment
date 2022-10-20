@@ -1,0 +1,17 @@
+@use "mixins" as m;
+
+.firstarrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.7em;
+}
+
+.secondarrow a span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.7em;
+  color: black;
+  padding: 2em;
+}

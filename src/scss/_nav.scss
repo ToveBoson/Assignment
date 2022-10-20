@@ -70,3 +70,7 @@
 #nav__checkbox:checked ~ label.nav__toggle .menu {
   display: none;
 }
+
+ul.nav__menu li:hover {
+  text-decoration: underline;
+}
