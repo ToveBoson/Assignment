@@ -1,0 +1,221 @@
+@use "mixins" as m;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  background-image: url(/src/scss/images/forest.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.nav {
+  position: relative;
+  width: 100%;
+  height: 2em;
+
+  &__toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 1rem;
+    right: 0;
+    fill: white;
+
+    @include m.desktop {
+      display: none;
+    }
+
+    svg {
+      width: 2em;
+    }
+
+    .close {
+      display: none;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.251);
+
+    @include m.desktop {
+      flex-direction: row;
+      justify-content: end;
+      height: 4em;
+    }
+
+    li {
+      list-style: none;
+      display: none;
+      font-size: 25px;
+
+      @include m.desktop {
+        display: block;
+        padding: 0.5em;
+        margin-right: 0.5em;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+/*When checked*/
+#nav__checkbox:checked ~ ul.nav__menu li {
+  display: inline-block;
+}
+#nav__checkbox:checked ~ label.nav__toggle .close {
+  display: block;
+}
+#nav__checkbox:checked ~ label.nav__toggle .menu {
+  display: none;
+}
+
+main {
+  max-height: 100vh;
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+
+    &__header {
+      font-weight: 700;
+      font-size: 40px;
+    }
+
+    &__subheader {
+      font-weight: 100;
+      font-size: 30px;
+    }
+    &__header,
+    &__subheader {
+      padding: 25px;
+    }
+  }
+
+  .firstarrow {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.about {
+  background-color: #fff;
+  width: 100%;
+
+  @include m.desktop {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__contact {
+    text-align: center;
+
+    @include m.desktop {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    margin: 2em;
+  }
+
+  &__contact,
+  &__info,
+  &__name {
+    color: black;
+    padding: 0.5em;
+  }
+
+  &__presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include m.desktop {
+      flex: 50%;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__members {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.552);
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 232, 232);
+    height: 7em;
+    width: 75%;
+    border-radius: 0.5em;
+  }
+
+  &__text {
+    color: black;
+    padding: 1.5em;
+  }
+
+  i {
+    color: black;
+    font-size: 40px;
+  }
+}
+
+.footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    @include m.desktop {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+  }
+
+  &__content ul {
+    padding: 1em;
+  }
+
+  &__content ul li {
+    list-style: none;
+    line-height: 2em;
+  }
+
+  &__content ul li a {
+    padding-right: 1em;
+  }
+}

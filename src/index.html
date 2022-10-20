@@ -5,13 +5,144 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="scss/main.scss" />
     <script
       src="https://kit.fontawesome.com/d2d43480b4.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="scss/main.scss" />
   </head>
   <body>
-    <p>hej</p>
+    <main>
+      <nav class="nav">
+        <input type="checkbox" id="nav__checkbox" class="nav__checkbox" />
+        <label for="nav__checkbox" class="nav__toggle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="menu"
+            width="40"
+            viewBox="0 0 448 512"
+          >
+            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="close"
+            width="40"
+            viewBox="0 0 320 512"
+          >
+            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+            />
+          </svg>
+        </label>
+
+        <ul class="nav__menu">
+          <li class="nav__home"><a href="#">Hem</a></li>
+          <li><a href="#">Om</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+      <aside class="container">
+        <div class="container__text">
+          <h1 class="container__header">Welcome to nature</h1>
+          <h2 class="container__subheader">A journey through time and sheep</h2>
+          <h2 class="container__subheader">
+            Too see how... cotton... is mage, made I mean
+          </h2>
+        </div>
+        <div class="firstarrow">
+          <a href="#about">
+            <span class="fa-sharp fa-solid fa-circle-down"></span>
+          </a>
+        </div>
+      </aside>
+    </main>
+
+    <section class="about" id="about">
+      <h1 class="about__contact">Träffa laget</h1>
+      <div class="about__presentation">
+        <h4 class="about__name">Rakib</h4>
+        <img class="about__members" src="scss/images/Rakib_Square.png" alt="" />
+        <div class="about__info">
+          <p class="about__text">
+            <i class="fa-sharp fa-solid fa-quote-right"></i> Rakib är vår
+            vassaste node-utvecklare och håller ständigt ett öga på nya tekniker
+          </p>
+        </div>
+      </div>
+      <div class="about__presentation">
+        <h4 class="about__name">Alexandra</h4>
+        <img
+          class="about__members"
+          src="scss/images/Alexandra_Square.png"
+          alt=""
+        />
+        <div class="about__info">
+          <p class="about__text">
+            <i class="fa-sharp fa-solid fa-quote-right"></i>
+            Alexandra håller reda på alla överallt och ser till att det flyter
+          </p>
+        </div>
+      </div>
+      <div class="about__presentation">
+        <h4 class="about__name">Lasse</h4>
+        <img
+          class="about__members"
+          src="scss/images/NoPerson_Square.png"
+          alt=""
+        />
+        <div class="about__info">
+          <p class="about__text">
+            <i class="fa-sharp fa-solid fa-quote-right"></i> Gör övriga saker...
+            mestadels...
+          </p>
+        </div>
+      </div>
+      <div class="about__presentation">
+        <h4 class="about__name">Sebastian</h4>
+        <img
+          class="about__members"
+          src="scss/images/Sebastian_Square.png"
+          alt=""
+        />
+        <div class="about__info">
+          <p class="about__text">
+            <i class="fa-sharp fa-solid fa-quote-right"></i>
+            En av våra utbildare som har stor erfarenhet av ganska många saker
+          </p>
+        </div>
+      </div>
+      <div class="secondarrow">
+        <a href="#contact">
+          <span class="fa-sharp fa-solid fa-circle-down"></span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__content" id="contact">
+        <ul class="footer__address">
+          <li>Tegel Consulting AB <br />Agatvägen 18 <br />168 60 Bromma</li>
+        </ul>
+        <ul class="footer__contact">
+          <li>info at tegelconsulting.se <br />070-123 456 78</li>
+        </ul>
+        <ul class="footer__socials">
+          <li>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>Instagram
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>Twitter
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>Facebook
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
