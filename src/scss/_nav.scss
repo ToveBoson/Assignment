@@ -8,7 +8,7 @@
   &__toggle {
     position: absolute;
     cursor: pointer;
-    margin: 1rem;
+    margin: 1em;
     right: 0;
     fill: white;
 
@@ -62,7 +62,7 @@
 
 /*When checked*/
 #nav__checkbox:checked ~ ul.nav__menu li {
-  display: inline-block;
+  display: block;
 }
 #nav__checkbox:checked ~ label.nav__toggle .close {
   display: block;

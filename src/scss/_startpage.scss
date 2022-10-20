@@ -74,10 +74,7 @@ main {
   }
 
   &__presentation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include m.flexcolumn;
 
     @include m.desktop {
       flex: 50%;
@@ -115,10 +112,8 @@ main {
 
 .footer {
   background-color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+  @include m.flexcolumn;
 
   &__content {
     @include m.desktop {
