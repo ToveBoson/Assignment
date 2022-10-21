@@ -48,6 +48,7 @@ main {
 .about {
   background-color: #fff;
   width: 100%;
+  font-size: 20px;
 
   @include m.desktop {
     display: flex;
@@ -95,7 +96,7 @@ main {
     align-items: center;
     background-color: rgb(238, 232, 232);
     height: 7em;
-    width: 75%;
+    width: 65%;
     border-radius: 0.5em;
   }
 
@@ -112,6 +113,7 @@ main {
 
 .footer {
   background-color: black;
+  font-size: 20px;
 
   @include m.flexcolumn;
 

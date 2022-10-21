@@ -4,8 +4,14 @@
   @include m.arrowposition;
 }
 
-.secondarrow a span {
-  @include m.arrowposition;
-  color: black;
-  padding: 2em;
+.secondarrow {
+  a span {
+    @include m.arrowposition;
+    color: black;
+    padding: 1em;
+  }
+
+  @include m.desktop {
+    width: 100%;
+  }
 }
