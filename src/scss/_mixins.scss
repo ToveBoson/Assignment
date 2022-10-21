@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 @mixin desktop {
   @media screen and (min-width: 1100px) {
     @content;
@@ -7,20 +9,20 @@
 @mixin flexcolumn {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: v.$center;
+  align-items: v.$center;
 }
 
 @mixin flexrow {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: v.$center;
+  align-items: v.$center;
 }
 
 @mixin arrowposition {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: v.$center;
   font-size: 1.7em;
 }

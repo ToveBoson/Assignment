@@ -1,4 +1,5 @@
 @use "mixins" as m;
+@use "variables" as v;
 
 * {
   margin: 0;
@@ -9,25 +10,22 @@
 }
 
 body {
-  height: 100vh;
+  height: v.$fullviewportheight;
   background-image: url(/src/scss/images/forest.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: v.$center;
   background-attachment: fixed;
 }
 
 main {
-  max-height: 100vh;
-  overflow: hidden;
-
   .container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
+    align-items: v.$center;
+    text-align: v.$center;
+    height: v.$fullviewportheight;
 
     &__header {
       font-weight: 700;
@@ -56,7 +54,7 @@ main {
   }
 
   &__contact {
-    text-align: center;
+    text-align: v.$center;
 
     @include m.desktop {
       width: 100%;
@@ -70,7 +68,7 @@ main {
   &__contact,
   &__info,
   &__name {
-    color: black;
+    color: v.$textcolor;
     padding: 0.5em;
   }
 
@@ -92,8 +90,8 @@ main {
 
   &__info {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: v.$center;
+    align-items: v.$center;
     background-color: rgb(238, 232, 232);
     height: 7em;
     width: 65%;
@@ -101,12 +99,12 @@ main {
   }
 
   &__text {
-    color: black;
+    color: v.$textcolor;
     padding: 1.5em;
   }
 
   i {
-    color: black;
+    color: v.$textcolor;
     font-size: 40px;
   }
 }

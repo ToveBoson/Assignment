@@ -1,4 +1,5 @@
 @use "mixins" as m;
+@use "variables" as v;
 
 .firstarrow {
   @include m.arrowposition;
@@ -7,7 +8,7 @@
 .secondarrow {
   a span {
     @include m.arrowposition;
-    color: black;
+    color: v.$textcolor;
     padding: 1em;
   }
 
